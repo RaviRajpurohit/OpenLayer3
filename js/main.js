@@ -59,4 +59,11 @@ $(document).ready(function(){
 			e.setVisible(name == layer);
 		});
 	});
+	/*
+	** (new added part for slider)
+	** The zoomslider variable to add slider in map
+	** .addControl(zoomslider) function control the silder 
+	*/
+	var zoomslider = new ol.control.ZoomSlider();
+        map.addControl(zoomslider);
 });
