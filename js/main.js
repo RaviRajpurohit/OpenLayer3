@@ -12,7 +12,10 @@ $(document).ready(function(){
 			new ol.control.ZoomSlider()
 		]),
 		renderer: 'canvas',
-		layers: [mapquest, osm, toner, stamen],
+		layers: [new ol.layer.Tile({
+		source: new ol.source.Stamen({
+			layer: 'toner'
+		})],
 		view: view
     	});
 	
